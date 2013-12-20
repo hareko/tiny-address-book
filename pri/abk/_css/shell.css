@@ -1,0 +1,154 @@
+/*
+ * layout style
+ *
+ * @package     Application
+ * @author      Vallo Reima
+ * @copyright   (C)2013
+*/
+html {
+  font-size: 100%;
+}
+body {
+  border: 0 none;
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: 1em;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+.shell {
+  width: 550px;
+  border: medium solid silver;
+  position:relative;
+  margin: 1em auto;
+  text-align: center;
+}
+.head {
+  background-color: #C0C0C0;
+  height: 2em;
+  text-align: center;
+}
+.head span {
+  font-size: 1.5em;
+}
+.head button {
+  float: right;
+  font-size: 1em;
+  font-style: italic;
+  margin: 0.2em 0.5em 0 0;
+  padding: 0;
+  text-decoration: underline;
+}
+.foot {
+  background-color:silver;
+  height: 1.5em;
+  line-height: 1.5em;
+  font-size: 0.9em;
+  text-align: center;
+  clear:both;
+}
+.foot a {
+  color: black;
+  text-decoration: none;
+}
+.foot a:hover {
+  text-decoration: underline;
+}
+.contents {
+  background: none repeat scroll 0 0 #eeeeee;
+  padding: 0.5em;
+}
+.section {
+  float: left;
+  font-style: italic;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+.msgraw {
+  float: right;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+.content  {
+  clear: both;
+  display: block;
+  overflow:auto;
+  margin-top: 1.5em;
+}
+table {
+  font-size:0.9em;
+  border: 0;
+  border-collapse:collapse;
+  color: black;
+}
+td {
+  vertical-align: top;
+}
+.change {
+  background-color: #dddddd;
+  border: 1px solid silver;
+  margin: auto;
+}
+.change td {
+  border: 0;
+  padding: 0.3em;
+  text-align: left;
+}
+.command {
+  margin: 0.5em;
+}
+.command button {
+  font-size: 0.75em;
+}
+.browse {
+  width: 525px; 
+  margin: auto;
+  padding: 0;
+}
+.browse .tabwrap { 
+  width: 525px;
+  margin: auto;
+  border: 1px solid silver;
+}
+.browse .tabhead { 
+  width: 500px; 
+}
+.browse .tabhead td{ 
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.browse div { 
+  width: 525px; 
+  overflow:auto;
+}
+.browse .tabbody {
+  width: 500px; 
+}
+.browse .tabbody td{ 
+  text-align: left;
+  font-size: 0.85em;
+}
+.browse .tabbody tr:hover{ 
+  background-color: silver;
+  cursor: default;
+}
+.w1{
+  width: 5%;
+}
+.w2{
+  width: 17%;
+}
+.w3{
+  width: 17%;
+}
+.w4{
+  width: 34%;
+}
+.w5{
+  width: 12%;
+}
+.w6{
+  width: 15%;
+}

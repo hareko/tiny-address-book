@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+aBook configuration
+@package     Application 
+@author      Vallo Reima
+@copyright   (C)2013
+-->
+<cfg>
+  <!-- Owner properties -->
+  <owr>
+    <name>aBook</name>
+    <copr>vallo.me</copr>
+    <year>2013</year>
+    <auth>Vallo Reima</auth>
+    <mail>info(ätt)vallo(dot)com</mail>
+  </owr>
+  <!-- Default settings -->
+  <set>
+  </set>
+  <!-- Database settings -->
+  <db>
+    <srv>mysql</srv>
+    <hst>localhost</hst>
+    <prt>3306</prt>
+    <nme>abook</nme>
+    <pfx></pfx>
+    <usr>book</usr>
+    <pwd>abook</pwd>
+  </db>
+  <!-- Modules -->
+  <mod>
+    <shl>shell</shl>
+    <edt>abook</edt>
+    <brw>browse</brw>
+    <end>finish</end>
+  </mod>
+  <!-- Development settings -->
+  <dev>
+    <dbg>1</dbg>
+    <url>http://abk.vregistrator.com/</url>
+  </dev>
+</cfg>

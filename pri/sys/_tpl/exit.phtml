@@ -1,0 +1,25 @@
+<?php
+/**
+ * finish/error panel template
+ *
+ *  in:  msgs['msg1'] - system message
+ *            msg2 - qualifying message
+ *            msg3 - error source
+ *
+ * @package     System
+ * @author      Vallo Reima
+ * @copyright   (C)2010
+ */
+$fh = true;
+?>
+<?php if ($fh): ?>
+  <div class="header"><?= ¤::_('head'); ?></div>
+<?php endif; ?>
+<div class="msgs" id="msgs">
+  <div class="msg0"><?= $msgs[0]; ?></div>
+  <div class="msg1"><?= $msgs[1]; ?></div>
+  <div class="msg2"><?= $msgs[2]; ?></div>
+</div>
+<?php if ($fh): ?>
+  <div class="footer unlink"><?= ¤::_('foot'); ?></div>
+<?php endif; ?>

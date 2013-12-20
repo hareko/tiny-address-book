@@ -1,0 +1,17 @@
+/**
+ * MSIE-specific styles
+ *
+ * @package     Solution
+ * @author      Vallo Reima
+ * @copyright   (C)2010
+*/
+.button-link {
+  cursor: hand;
+}
+.msgs {
+  word-wrap: break-word;
+}
+* html .mbo{
+  background-image:none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="mbx.png", sizingMethod="scale");
+}

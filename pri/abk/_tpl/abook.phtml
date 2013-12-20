@@ -1,0 +1,82 @@
+<?php
+/*
+ * panel template
+ *
+ * @package Application
+ * @author Vallo Reima
+ * @copyright (C)2013
+ */
+$transit = ¤::Enc(¤::$_->ts, true);
+$fnm = ¤::Config('db/nme') . CFG;
+$fid = ¤::$_->fid;
+$fld = ¤::_('txt.fld');
+$cmd = ¤::_('txt.cmd');
+
+function Opts($ops, $flg, $def = null)
+/*
+ * form select options
+ * in: ops -- options array
+ *     flg -- true - add empty option
+ *     def -- default option
+ */ {
+  if ($flg) {
+    $ops[''] = '';
+  }
+  $htm = '';
+  $sld = ' selected="selected"';
+  foreach ($ops as $key => $val) {
+    $s = $key == $def ? $sld : '';
+    $htm .= '<option value="' . $key . '"' . $s . '>' . $val . '</option>' . PHP_EOL;
+  }
+  return $htm;
+}
+?>
+<form id="<?= $fid; ?>">
+  <input id="id" type="hidden" value="">
+  <table class="change">
+    <tbody>
+      <tr>
+        <td><label for="fname" id="l_fname"><?php echo $fld['fname']; ?></label></td>
+        <td><input id="fname" type="text"></td>
+      </tr>
+      <tr>
+        <td><label for="lname" id="l_lname"><?php echo $fld['lname']; ?></label></td>
+        <td><input id="lname" type="text"></td>
+      </tr>
+      <tr>
+        <td><label for="street" id="l_street"><?php echo $fld['street']; ?></label></td>
+        <td><input id="street" type="text"></td>
+      </tr>
+      <tr>
+        <td><label for="zip" id="l_zip"><?php echo $fld['zip']; ?></label></td>
+        <td><input id="zip" type="text"></td>
+      </tr>
+      <tr>
+        <td><label for="town" id="l_town_id"><?php echo $fld['town']; ?></label></td>
+        <td><select id="town_id">
+            <?php echo Opts($towns, true, ''); ?>
+          </select></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<div id="browse" class="browse hide"></div>
+<div id="command" class="command hide">
+  <button type="button" name="A"><?= $cmd['a']; ?></button>
+  <button type="button" name="D"><?= $cmd['d']; ?></button>
+  <button type="button" name="M"><?= $cmd['m']; ?></button>
+  <button type="button" name="B"><?= $cmd['b']; ?></button>
+  <button type="button" name="O"><?= $cmd['o']; ?></button>
+  <button type="button" name="CL"><?= $cmd['cl']; ?></button>
+  <button type="button" name="R"><?= $cmd['r']; ?></button>
+  <button type="button" name="CC"><?= $cmd['cc']; ?></button>
+  <button type="button" name="S"><?= $cmd['s']; ?></button>
+</div>
+<form class="hide" id="transit" target="download" enctype="application/x-www-form-urlencoded" 
+      method="post" action="<?= ¤::_('url'); ?>">
+  <div><?= $transit; ?></div>
+  <input type="hidden" name="srv" value="brw">
+  <input type="hidden" name="fnm" value="<?= $fnm; ?>">
+  <input type="hidden" name="wkf" id="filename">
+</form>
+<iframe class="hide" name="download"></iframe>

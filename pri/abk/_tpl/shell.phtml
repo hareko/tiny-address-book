@@ -1,0 +1,59 @@
+<?php
+/*
+ * layout template
+ *
+ * @package     Application
+ * @author      Vallo Reima
+ * @copyright   (C)2012
+ */
+echo ¤::HtmlDoc();
+?>
+<html <?= ¤::HtmlHtml(); ?>>
+  <head>
+    <?= ¤::HtmlHead([$base]); ?>
+    <style type="text/css">
+<?php
+$nme = basename(__FILE__, TPL); /* example's filename */
+$file = CSSD . $nme . '.css';
+include($file);
+?>
+    </style>
+    <?= ¤::HtmlScript([$base, 'common']); ?>
+    <script type="text/javascript">
+<?php
+$nme = basename(__FILE__, TPL); /* example's filename */
+$file = JSD . $abk . '.js';
+include($file);
+?>
+    </script>
+    <script type="text/javascript">
+
+      window.onload = function() {
+        ts = new Transit(); /* activate commons */
+        ts.abk = new <?= ¤::$_->cln; ?>('<?= ¤::$_->fid; ?>');
+      };
+
+    </script>
+  </head>
+  <body>
+    <div class="shell">
+      <div id="head" class="head">
+        <span><?= ¤::_('head'); ?></span>
+        <button type="button" id="finish" name="E" class="button-link"><?= ¤::_('txt.end'); ?></button>
+      </div>
+      <div class="contents">
+        <div class="section" id="section">
+        </div>
+        <div class="msgraw" id="msgraw">
+          <noscript><?= ¤::_('txt.jsd'); ?></noscript>
+        </div>
+        <div id="content" class="content">
+          <?php include($mod); ?>
+        </div>
+      </div>
+      <div id="foot" class="foot">
+        <?= ¤::_('foot'); ?>
+      </div>
+    </div>
+  </body>
+</html>

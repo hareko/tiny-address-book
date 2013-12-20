@@ -1,0 +1,70 @@
+<?php
+/*
+ * browse template
+ *
+ * @package Application
+ * @author Vallo Reima
+ * @copyright (C)2013
+ */
+$flds = ['fname', 'lname', 'street', 'zip', 'town'];
+$hdng = ['id' => '0'];
+foreach ($flds as $fld){
+  $hdng[$fld] = ¤::_('txt.fld')[$fld];
+}
+
+function Rows($fld)
+/*
+ * form table body rows
+ * in:  rows -- rows array
+ *      fld -- field names
+ */ {
+  $htm = '';
+  $i = 0;
+  while ($row = ¤::_('db')->Record()) {
+    $i++;
+    $htm .= Row($row, $i, $fld);
+  }
+  return $htm;
+}
+
+function Row($row, $cnt, $fld)
+/*
+ * form table row htm
+ * in:  row -- row data
+ *      cnt -- row number
+ *      fld -- field names
+ */ {
+  $htm = '<tr id="id' . $row['id'] . '">' . PHP_EOL;
+  $htm .= '<td class="w1">' . $cnt . '</td>' . PHP_EOL;
+  for ($i = 0; $i < count($fld); $i++) {
+    $htm .= '<td class="w' . ($i + 2) . '">' . $row[$fld[$i]] . '</td>' . PHP_EOL;
+    ;
+  }
+  $htm .= '</tr>' . PHP_EOL;
+  return $htm;
+}
+?>
+<table class="tabwrap">
+  <tbody>
+    <tr>
+      <td>
+        <table class="tabhead">
+          <tbody>
+<?= Row($hdng, '#', $flds); ?>
+          </tbody>
+        </table>  
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div>    
+          <table class="tabbody">
+            <tbody id="tabbody">
+<?= Rows($flds); ?>
+            </tbody>
+          </table>
+        </div>
+      </td>
+    </tr>	
+  </tbody>
+</table>
