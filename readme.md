@@ -6,7 +6,7 @@ This demo application shows the design and programming techniques used in my pro
 
 The database consists of *contacts* and *towns* tables containing First & Last Name, Street, Postcode and Town data. The records can be added, deleted or modified. The table can be browsed and saved in XML format. Double-clicking on the row selects the record for editing. The towns list must be edited outside.
 
-The demo is uploaded on [abk.vregistrator.com].
+The demo is uploaded on [arc.vallo.me/abk].
 
 ## Design & programming ##
 
@@ -90,5 +90,5 @@ The *abk* and *sys* folders (may) have the subfolders:
 - *pri/sys/_tpl/exits.phtml* - exit panel shell template
 
 
-[vregistrator.com]: http://vregistrator.com/hlp/en/spgm
-[abk.vregistrator.com]: http://abk.vregistrator.com
+[vregistry.com]: http://app.vregistry.com/hlp/en/spgm
+[arc.vallo.me/abk]: http://arc.vallo.me/abk
