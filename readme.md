@@ -1,6 +1,6 @@
 # Tiny Address Book #
 
-This demo application shows the design and programming techniques used in my projects. Some of the components of vRegistrator framework are used. All the code is original (except some standard functions).
+This demo application shows the design and programming techniques used in my projects. Some of the components of vRegistry framework are used. All the code is original (except some standard functions).
 
 ## Functionality ##
 
@@ -10,7 +10,7 @@ The demo is uploaded on [arc.vallo.me/abk].
 
 ## Design & programming ##
 
-OOP MVC principles are followed both on the back and front end. The AJAX is used for client-server communications. See [vregistrator.com] regarding the techniques.
+OOP MVC principles are followed both on the back and front end. The AJAX is used for client-server communications. See [vregistry.com] regarding the techniques.
 
 ## Requirements ##
 
