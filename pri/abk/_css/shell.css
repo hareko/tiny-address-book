@@ -25,19 +25,9 @@ body {
 }
 .head {
   background-color: #C0C0C0;
-  height: 2em;
   text-align: center;
-}
-.head span {
-  font-size: 1.5em;
-}
-.head button {
-  float: right;
-  font-size: 1em;
-  font-style: italic;
-  margin: 0.2em 0.5em 0 0;
-  padding: 0;
-  text-decoration: underline;
+  height: 1.4em;
+  font-size: 1.4em;
 }
 .foot {
   background-color:silver;
@@ -58,23 +48,29 @@ body {
   background: none repeat scroll 0 0 #eeeeee;
   padding: 0.5em;
 }
+.info{
+  font-style: italic;
+  font-family: monospace;
+  font-weight: bold;
+  height: 1.2em;
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
+}
 .section {
   float: left;
-  font-style: italic;
-  font-weight: bold;
-  font-family: monospace;
-  font-size: 1.2em;
 }
-.msgraw {
+.info .msgraw {
+  text-align: center;
+}
+.finish{
   float: right;
-  font-family: monospace;
-  font-size: 1.2em;
+  font-style: italic;
+  font-size: 110%;
+  text-decoration: underline;
 }
 .content  {
   clear: both;
-  display: block;
   overflow:auto;
-  margin-top: 1.5em;
 }
 table {
   font-size:0.9em;
