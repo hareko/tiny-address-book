@@ -6,11 +6,11 @@ This demo application shows the design and programming techniques used in my pro
 
 The database consists of *contacts* and *towns* tables containing First & Last Name, Street, Postcode and Town data. The records can be added, deleted or modified. The table can be browsed and saved in XML format. Double-clicking on the row selects the record for editing. The towns list must be edited outside.
 
-The demo is uploaded on [arc.vallo.me/abk].
+The demo is uploaded on [arc.vregistry.com].
 
 ## Design & programming ##
 
-OOP MVC principles are followed both on the back and front end. The AJAX is used for client-server communications. See [vregistry.com] regarding the techniques.
+OOP MVC principles are followed both on the back and front end. The AJAX is used for client-server communications. See [app.vregistry.com] regarding the techniques.
 
 ## Requirements ##
 
@@ -90,5 +90,5 @@ The *abk* and *sys* folders (may) have the subfolders:
 - *pri/sys/_tpl/exits.phtml* - exit panel shell template
 
 
-[vregistry.com]: http://app.vregistry.com/hlp/en/spgm
-[arc.vallo.me/abk]: http://arc.vallo.me/abk
+[app.vregistry.com]: http://app.vregistry.com/hlp/en/spgm
+[arc.vregistry.com]: http://arc.vregistry.com/abk/
