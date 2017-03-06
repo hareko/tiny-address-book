@@ -39,13 +39,15 @@ include($file);
     <div class="shell">
       <div id="head" class="head">
         <span><?= ¤::_('head'); ?></span>
-        <button type="button" id="finish" name="E" class="button-link"><?= ¤::_('txt.end'); ?></button>
       </div>
       <div class="contents">
-        <div class="section" id="section">
-        </div>
-        <div class="msgraw" id="msgraw">
-          <noscript><?= ¤::_('txt.jsd'); ?></noscript>
+        <div class="info">
+          <div class="section" id="section"></div>
+          <button type="button" id="finish" name="E" class="button-link finish"><?= ¤::_('txt.end'); ?></button>
+          <div class="msgraw" id="msgraw">
+            <noscript><?= ¤::_('txt.jsd'); ?></noscript>
+          </div>
+          <div class="endFloat"></div>
         </div>
         <div id="content" class="content">
           <?php include($mod); ?>
