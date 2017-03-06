@@ -9,10 +9,10 @@ aBook configuration
   <!-- Owner properties -->
   <owr>
     <name>aBook</name>
-    <copr>vallo.me</copr>
+    <copr>vregistry.com</copr>
     <year>2013</year>
     <auth>Vallo Reima</auth>
-    <mail>info(ätt)vallo(dot)com</mail>
+    <mail>vallo(ätt)vregistry(dot)com</mail>
   </owr>
   <!-- Default settings -->
   <set>
@@ -24,8 +24,8 @@ aBook configuration
     <prt>3306</prt>
     <nme>abook</nme>
     <pfx></pfx>
-    <usr>book</usr>
-    <pwd>abook</pwd>
+    <usr>nils</usr>
+    <pwd>lodur</pwd>
   </db>
   <!-- Modules -->
   <mod>
@@ -37,6 +37,6 @@ aBook configuration
   <!-- Development settings -->
   <dev>
     <dbg>1</dbg>
-    <url>http://abk.vregistrator.com/</url>
+    <url>http://arc.vregistry.com/abk/</url>
   </dev>
 </cfg>
