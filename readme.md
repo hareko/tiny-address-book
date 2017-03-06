@@ -89,6 +89,9 @@ The *abk* and *sys* folders (may) have the subfolders:
 - *pri/sys/_tpl/exit.phtml* - finish/error panel template
 - *pri/sys/_tpl/exits.phtml* - exit panel shell template
 
-
+## ChangeLog ##
+- Mar 2017
+    - shell design correction
+    
 [app.vregistry.com]: http://app.vregistry.com/hlp/en/spgm
 [arc.vregistry.com]: http://arc.vregistry.com/abk/
