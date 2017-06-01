@@ -48,7 +48,7 @@ abstract class Base {
    *  system error handler
    */ {
     if (is_array($errorCode)) {
-      $errtxt = $this->prop->txt->$errorCode[0] . ": " . $errorCode[1];
+      $errtxt = $this->prop->txt->{$errorCode[0]} . ": " . $errorCode[1];
     } else {
       $errtxt = $this->prop->txt->$errorCode;
     }
