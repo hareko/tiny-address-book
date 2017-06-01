@@ -35,13 +35,13 @@ class Common extends Base {
    */ {
     $ptr = & $this->prop;
     for ($i = 0; $i < count($pth) - 1; $i++) {/* move to terminal's parent */
-      if (isset($ptr->$pth[$i])) {
-        $ptr = & $ptr->$pth[$i];  /* get next node */
+      if (isset($ptr->{$pth[$i]})) {
+        $ptr = & $ptr->{$pth[$i]};  /* get next node */
       } else {
         return null; /* undefined node */
       }
     }
-    return isset($ptr->$pth[$i]) ? $ptr->$pth[$i] : null;     /* get a value */
+    return isset($ptr->{$pth[$i]}) ? $ptr->{$pth[$i]} : null;     /* get a value */
   }
 
   public function SetProperty($pth, $val)
@@ -52,12 +52,12 @@ class Common extends Base {
    */ {
     $ptr = & $this->prop;    /* point to properties structure */
     for ($i = 0; $i < count($pth) - 1; $i++) {/* move to terminal's parent */
-      if (!isset($ptr->$pth[$i])) {
-        $ptr->$pth[$i] = new stdClass();  /* set default if node does not exist */
+      if (!isset($ptr->{$pth[$i]})) {
+        $ptr->{$pth[$i]} = new stdClass();  /* set default if node does not exist */
       }
-      $ptr = & $ptr->$pth[$i]; /* get next node */
+      $ptr = & $ptr->{$pth[$i]}; /* get next node */
     }
-    $ptr->$pth[$i] = $val;     /* set a value */
+    $ptr->{$pth[$i]} = $val;     /* set a value */
   }
 
   public function GetSign()
